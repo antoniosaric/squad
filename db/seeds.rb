@@ -23,3 +23,15 @@ end
       event_id: event.id
       })
 end
+
+10.times do
+	team = team.all.sample
+	Event.create({
+		name: Faker::StarWars.character,
+		location: Faker::Address.city,
+		date: Faker::Date.between(2.days.ago, Date.today),
+		reg_fee: Faker::Commerce.price,
+		description: Faker::Hipster.paragraph,
+		team_id: team.id
+	})
+end
