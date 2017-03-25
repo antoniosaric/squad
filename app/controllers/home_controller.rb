@@ -4,6 +4,13 @@ class HomeController < ApplicationController
 
   end
 
+  #For google and eventbrite api
+  def search
+    redirect_to :results
+  end
 
+  def results
+
+  end
 
 end
