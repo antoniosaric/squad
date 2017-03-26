@@ -25,16 +25,34 @@ end
     reg_fee: Faker::Commerce.price,
     description: Faker::Hipster.paragraph,
     team_id: rand(1...10)
-  })
+    })
 end
 
 10.times do
   user = User.all.sample
   event = Event.all.sample
   user.teams.create!({
-      name: Faker::Team.name,
-      event_id: event.id,
-      user_id: user.id
-      })
+    name: Faker::Team.name,
+    event_id: event.id
+    })
 end
 
+10.times do 
+  team = Team.all.sample
+  user = User.all.sample
+  user.team_users.create!({
+    team_id: team.id
+    })
+
+
+
+end
+
+10.times do 
+  event = Event.all.sample
+  team = Team.all.sample
+  team.event_teams.create!({
+    event_id: event.id
+    })
+
+end
