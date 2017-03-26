@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   post "/search" => "home#search"
   get "/results" => "home#results"
 
-  get '/users/:id' => "user#profile"
   get '/users/new' => "user#new"
   post '/users' => "user#create"
+  get '/users/:id' => "user#profile"
 end
