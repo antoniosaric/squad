@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 20170325233302) do
   end
 
   create_table "events", force: :cascade do |t|
+    t.string  "name"
+    t.string  "location"
+    t.string  "description"
+    t.string  "date"
+    t.string  "reg_fee"
+    t.integer "team_id"
+    t.index ["team_id"], name: "index_events_on_team_id", using: :btree
   end
 
   create_table "team_users", force: :cascade do |t|
@@ -35,8 +42,10 @@ ActiveRecord::Schema.define(version: 20170325233302) do
   create_table "teams", force: :cascade do |t|
     t.string   "name"
     t.integer  "user_id"
+    t.integer  "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_teams_on_event_id", using: :btree
     t.index ["user_id"], name: "index_teams_on_user_id", using: :btree
   end
 
@@ -44,8 +53,10 @@ ActiveRecord::Schema.define(version: 20170325233302) do
     t.string   "name"
     t.string   "email"
     t.integer  "team_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "password_digest"
+    t.integer  "phase"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.index ["team_id"], name: "index_users_on_team_id", using: :btree
   end
 

@@ -3,7 +3,7 @@ class CreateTeams < ActiveRecord::Migration[5.0]
     create_table :teams do |t|
       t.string :name
       t.references :user
-
+      t.references :event
       t.timestamps
     end
   end
