@@ -1896,3 +1896,7 @@
 		body.is-ie #wrapper {
 			height: 100%;
 		}		
+
+.circular--square {
+  border-radius: 50%;
+}
