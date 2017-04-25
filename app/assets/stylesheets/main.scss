@@ -1,0 +1,126 @@
+
+/* Basic */
+
+body {
+  color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15pt;
+  font-weight: 300 !important;
+  letter-spacing: -0.025em;
+  line-height: 1.75em;
+}
+
+/* Wrapper */
+@keyframes wrapper {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#wrapper {
+  -moz-animation: wrapper 3s forwards;
+  -webkit-animation: wrapper 3s forwards;
+  -ms-animation: wrapper 3s forwards;
+  animation: wrapper 3s forwards;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#bg {
+/* Set your background with this */
+  position: relative;
+  background: #348cb2 url("/assets/Mug.jpg");
+  background-repeat: repeat-x;
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+}
+
+#bg {
+  background-size: 2250px auto;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+/* Main */
+
+#main {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+#main:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  margin-right: 0;
+  vertical-align: middle;
+  width: 1px;
+}
+
+@keyframes header {
+  0% {
+    -moz-transform: translate3d(0,1em,0);
+    -webkit-transform: translate3d(0,1em,0);
+    -ms-transform: translate3d(0,1em,0);
+    transform: translate3d(0,1em,0);
+    opacity: 0;
+  }
+
+  100% {
+    -moz-transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    opacity: 1;
+  }
+}
+
+#header {
+  -moz-animation: header 1s 2.25s forwards;
+  -webkit-animation: header 1s 2.25s forwards;
+  -ms-animation: header 1s 2.25s forwards;
+  animation: header 1s 2.25s forwards;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  cursor: default;
+  display: inline-block;
+  opacity: 0;
+  position: relative;
+  text-align: center;
+  top: -1em;
+  vertical-align: middle;
+  width: 90%;
+}
+
+#header h1 {
+  font-size: 4.35em;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  line-height: 1em;
+}
+
