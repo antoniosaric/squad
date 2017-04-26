@@ -6,7 +6,7 @@
       <header id="header">
         <h1>Squad</h1>
         <p>Hack all day &nbsp;&bull;&nbsp; Win Gifts &nbsp;&bull;&nbsp; More projects</p>
-        <%= link_to "Login With Google", class: "btn-large waves-effect waves-light teal lighten-1"%>
+        <%= link_to "Login With Google", user_omniauth_authorize_path(:google_oauth2), class: "btn-large waves-effect waves-light teal lighten-1"%>
         <p> OR </p>
 
         <form action= "/search" method="post" style="display: block;"/>
