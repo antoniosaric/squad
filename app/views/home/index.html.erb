@@ -1,12 +1,4 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <title>SQUAD</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="assets/css/main.css" />
-</head>
-<body class="loading">
+<body class="loading" id="squad">
   <div id="wrapper">
     <div id="bg"></div>
     <div id="overlay"></div>
@@ -15,19 +7,21 @@
         <h1>Squad</h1>
         <p>Hack all day &nbsp;&bull;&nbsp; Win Gifts &nbsp;&bull;&nbsp; More projects</p>
         <%= link_to "Login With Google", class: "btn-large waves-effect waves-light teal lighten-1"%>
-        <form action= "/search" method="post">
-          <select>
-            <option value="San Francisco">San Francisco</option>
-            <option value="Seattle">Seattle</option>
-            <option value="Chicago">Chicago</option>
-            <option value="New York">New York</option>
-          </select>
-        </form>
-        <%= button_to "search", search_path, :id => "open-contacts-dialog-btn",
-        :class => "inbox-sf-add-btn tip", :method => :post %>
-      </header>
-    </div>
+        <p> OR </p>
+
+        <form action= "/search" method="post" style="display: block;"/>
+        <select>
+          <option>Select City</option>
+          <option value="San Francisco">San Francisco</option>
+          <option value="Seattle">Seattle</option>
+          <option value="Chicago">Chicago</option>
+          <option value="New York">New York</option>
+        </select>
+        <input type="button" value="submit" class="btn-large waves-effect waves-light teal lighten-1">
+      </form>
+    </header>
   </div>
+</div>
 </body>
-</html>
+
 
