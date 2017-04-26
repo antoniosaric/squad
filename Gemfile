@@ -10,6 +10,12 @@ gem 'faker'
 gem 'bcrypt'
 
 gem 'rb-readline'
+gem 'dotenv-rails', require: 'dotenv/rails-now'
+gem 'devise', github: 'twalpole/devise', branch: 'master'
+gem 'omniauth-google-oauth2'
+gem 'google-api-client', '0.7.1', require: 'google/api_client'
+gem 'httparty'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
 gem 'gmaps4rails'
@@ -23,6 +29,7 @@ gem 'materialize-sass'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
+gem 'jquery-turbolinks'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
