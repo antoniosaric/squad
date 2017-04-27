@@ -3,9 +3,8 @@ Rails.application.routes.draw do
   root 'home#index'
 
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
-
-  resources :users do
-  end
+  resources :sessions
+  resources :users
 
 
   post "/search" => "home#search"
