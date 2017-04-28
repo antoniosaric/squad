@@ -1,5 +1,5 @@
-class HomeController < ApplicationController
-
+class TeamController < ApplicationController
+  
   def index
 
   end
@@ -22,5 +22,4 @@ class HomeController < ApplicationController
     #  marker.title user.title
   #  end
   end
-
 end
