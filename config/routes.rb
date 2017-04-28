@@ -9,8 +9,4 @@ Rails.application.routes.draw do
   resources :users
 
 
-  post "/search" => "home#search"
-  get "/results" => "home#results"
-
-
 end
