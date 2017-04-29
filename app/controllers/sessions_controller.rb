@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
   end
 
   def create
+
   user = User.from_omniauth(env["omniauth.auth"])
   user.access_token = request.env["omniauth.auth"].credentials.token
   user.refresh_token = request.env["omniauth.auth"].credentials.request_token
@@ -13,7 +14,7 @@ class SessionsController < ApplicationController
   p "BLAHLDKFJDSL:KFJDSLF:KJSDF:LKJSDFL:BSDFJKDSFHLKDSJFLFKDSJF"
   p request.env["omniauth.auth"]
   p "THIS IS THE END OF THE THING THAT WE ARE TRYAN PRITN"
-  redirect_to "user#show"
+  redirect_to "users#show"
 
   end
 
