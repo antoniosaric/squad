@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
   p "BLAHLDKFJDSL:KFJDSLF:KJSDF:LKJSDFL:BSDFJKDSFHLKDSJFLFKDSJF"
   p request.env["omniauth.auth"]
   p "THIS IS THE END OF THE THING THAT WE ARE TRYAN PRITN"
-  redirect_to "users#show"
+  redirect_to "user#show"
 
   end
 
