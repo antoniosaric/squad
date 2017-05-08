@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions
 
+  post '/search' => 'events#index'
 
 end
