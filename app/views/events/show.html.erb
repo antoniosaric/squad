@@ -1,0 +1,18 @@
+
+<%= link_to "Profile", user_path(current_user) %>
+
+
+<%= link_to "Home", root_path(@session) %>
+
+
+<p> Event Details </p>
+
+  <ul> 
+    <li>name</li>
+    <li>location</li>
+    <li>description</li>
+    <li>date</li>
+    <li>reg_fee</li>
+    <li>team</li>
+  </ul>
+        <%= link_to "Sign Up For Team", new_team_path(@team), class: "btn-large waves-effect waves-light teal lighten-1"%>

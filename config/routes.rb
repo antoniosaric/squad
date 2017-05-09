@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   
   resources :users
   resources :sessions
+  resources :events
 
-  post '/search' => 'events#index'
+  get '/search' => 'events#index'
 
 end
