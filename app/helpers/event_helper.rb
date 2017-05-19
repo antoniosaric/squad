@@ -23,8 +23,11 @@ module EventHelper
       eventname = inp['name']['text']
       eventlink = inp['url']
       description = inp['description']['text']
+      start = inp['start']['local']
+      endd = inp['end']['local']
 
       html += "<h5><a href="+ eventlink +">" + eventname + "</a>
+      " + "   " + start + " - " + endd + "
       <form method='get' action='/teams/new'>
       <button type='submit'>Join Team</button> 
       </form></h5>
