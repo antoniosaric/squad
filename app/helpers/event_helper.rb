@@ -1,8 +1,8 @@
 module EventHelper
 
-  def api
+  def api(city)
     token = ENV['EB_TOKEN']
-    url = "https://www.eventbriteapi.com/v3/events/search/?token=#{token}&location.address=sanfrancisco&q=hackathon"
+    url = "https://www.eventbriteapi.com/v3/events/search/?token=#{token}&location.address=#{city}&q=hackathon"
     returnjson = HTTParty.get(url)
     html = format_html(returnjson)
     code = format_url(html)
