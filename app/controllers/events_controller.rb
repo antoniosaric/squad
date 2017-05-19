@@ -12,7 +12,8 @@ class EventsController < ApplicationController
 
     # This is to specific the token you want to use for each API call.
     #Eventbrite::Event.search({q: 'hackathon', }, 'your_access_token')
-    @response = self.api.html_safe
+    @city = params[:select][:city]
+    @response = self.api(@city).html_safe
 
 
   end
