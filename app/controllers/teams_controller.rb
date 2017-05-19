@@ -6,5 +6,8 @@ class TeamController < ApplicationController
 
   #For google and eventbrite api
 
+  def new
+    
+  end
 
 end

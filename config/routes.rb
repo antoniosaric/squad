@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions
   resources :events
+  resources :teams
 
   get '/search' => 'events#index'
 
