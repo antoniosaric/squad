@@ -6,7 +6,7 @@ module EventHelper
     returnjson = HTTParty.get(url)
     html = format_html(returnjson)
     code = format_url(html)
-    #pup = "https://maps.googleapis.com/maps/api/directions/json?origin=#{origin}&destination=#{destination}"
+
     return code
 
   end
@@ -23,8 +23,11 @@ module EventHelper
       eventname = inp['name']['text']
       eventlink = inp['url']
       description = inp['description']['text']
+      start = inp['start']['local']
+      endd = inp['end']['local']
 
       html += "<h5><a href="+ eventlink +">" + eventname + "</a>
+      " + "   " + start + " - " + endd + "
       <form method='get' action='/teams/new'>
       <button type='submit'>Join Team</button> 
       </form></h5>
