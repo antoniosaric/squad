@@ -7,6 +7,7 @@ class CreateEvents < ActiveRecord::Migration[5.0]
       t.string :date
       t.string :reg_fee
       t.references :team
+      t.integer :event_id
 
       t.timestamps
     end

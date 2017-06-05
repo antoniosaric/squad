@@ -8,8 +8,7 @@ class EventsController < ApplicationController
 
   end
 
-  def new
-    @user = current_user
+  def show
   end
 
 end

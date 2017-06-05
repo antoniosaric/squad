@@ -28,7 +28,7 @@ module EventHelper
 
       html += "<h5><a href="+ eventlink +">" + eventname + "</a>
       " + "   " + start + " - " + endd + "
-      <form method='get' action='/teams/new'>
+      <form method='post' action='/events/show'>
       <button type='submit'>Join Team</button> 
       </form></h5>
       <p>"+ description + "</p><br>"
